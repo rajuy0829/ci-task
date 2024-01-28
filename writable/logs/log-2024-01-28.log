@@ -1,0 +1,21 @@
+CRITICAL - 2024-01-28 06:14:41 --> ErrorException: Undefined property: App\Controllers\Task::$load
+in APPPATH\Controllers\Task.php on line 17.
+ 1 APPPATH\Controllers\Task.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Task::$load', 'C:\\xampp\\htdocs\\ci-task\\app\\Controllers\\Task.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Task->add()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Task))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-28 06:15:45 --> ErrorException: Undefined property: App\Controllers\Task::$load
+in APPPATH\Controllers\Task.php on line 11.
+ 1 APPPATH\Controllers\Task.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Task::$load', 'C:\\xampp\\htdocs\\ci-task\\app\\Controllers\\Task.php', 11)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Task->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Task))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-28 06:15:48 --> ErrorException: Undefined property: App\Controllers\Task::$load
+in APPPATH\Controllers\Task.php on line 11.
+ 1 APPPATH\Controllers\Task.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Task::$load', 'C:\\xampp\\htdocs\\ci-task\\app\\Controllers\\Task.php', 11)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Task->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Task))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
