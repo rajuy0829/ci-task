@@ -5,5 +5,5 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/task', 'Task::index');
-//$routes->get('/task', 'Task::add');
+$routes->get('/', 'Task::index');
+$routes->post('/generatenum', 'Task::generatenum');
