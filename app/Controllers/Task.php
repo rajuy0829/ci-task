@@ -25,52 +25,34 @@ class Task extends BaseController
 
     private function generateNumbers($num)
     {        
+        $asc = [];
         $numbers = [];
-        $maxRows = 4; 
+        $maxRows = $num;
         for ($i = 1; $i <= $maxRows; $i++) {
-            $row = [];
-            if ($i == 1) {
-                $row[] = 1;
-            } else if ($i == 2){
-                $row[] = $i;
-                $row[] = $i * 3 + 1;
-            } else if($i == 3) {
-                $row[] = $i;
-            }else if($i == 4) {
-                $row[] = $i;
-                $row[] = $i + 1;
-            } 
-            if ($i > 2) {
-                for ($j = 3; $j <= $i + 1; $j++) {
-                    $row[] = $i * $j-3;
-                }
+            $ascRow = [];
+            $ascRow[] = $i;
+            for ($j = 1; $j < $i; $j++) {
+                if($i<3){
+                    $ascRow[] = $ascRow[0] + $maxRows * $j+1;
+                }else if($i==3){
+                    $ascRow[] = $ascRow[0] * $j+$i;
+                }else if($i==4){
+                    if($j<2){
+                        $ascRow[] = $j*$i+1;
+                    }else{
+                        if($j ==2){
+                            $ascRow[] = $j*$i;
+                        }else{
+                            $ascRow[] = $j*$i-2; 
+                        }
+                    }
+                    
+                }                   
+                
             }
-            $numbers[] = $row;
+            $numbers[] = $ascRow;
         }
-        return $numbers;
-        // $ascending = [];
-        // $descending = [];
-        
-        // foreach ($n as $num) {
-        //     if ($num % 2 == 0) {
-        //         $descending[] = $num;
-        //     } else {
-        //         $ascending[] = $num;
-        //     }
-        // }
-        // sort($ascending);
-        // rsort($descending);
-        // $pattern = [];
-        // while (!empty($ascending) || !empty($descending)) {
-        //     if (!empty($ascending)) {
-        //         $pattern[] = array_shift($ascending);
-        //     }
-        //     if (!empty($descending)) {
-        //         $pattern[] = array_shift($descending);
-        //     }
-        // }
-
-        // return $pattern;
+       return $numbers;
     }
 
 }
